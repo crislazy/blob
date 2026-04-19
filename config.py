@@ -22,6 +22,9 @@ CUSTOM_STATUS = True # Have a Custom Status
 STATUS_TEXT = "Mining In BlobCraft" # Status Text
 STATUS_TYPE = "playing"  # playing / watching / listening
 HELP_COMMAND = True
+ENABLE_USERINFO = True
+ENABLE_8BALL = True
+ENABLE_CAT = True
 
 # ==== MESSAGES ====
 welcome_messages = [
@@ -44,3 +47,5 @@ blob_messages = [
     ":3",
     "This is a response to your message, please shut up"
 ]
+
+ballresponse = ["Yes", "No", "Maybe", "Definitely", "Absolutely not"]

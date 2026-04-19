@@ -1,3 +1,4 @@
+# ==== main.py ====
 # BLOB - A Discord Bot
 
 import discord
@@ -115,6 +116,28 @@ async def s(ctx, channel_id: int, *, message):
 
     await channel.send(message)
 
+#User info
+@bot.command()
+async def userinfo(ctx, member: discord.Member = None):
+    if not config.ENABLE_USERINFO:
+        return
+    member = member or ctx.author
+    await ctx.send(f"User: {member}\nID: {member.id}\nJoined: {member.joined_at}")
+
+#8Ball
+@bot.command()
+async def ball(ctx):
+    if not config.ENABLE_8BALL:
+        return
+    await ctx.send(f"🎱 {random.choice(config.ballresponse)}")
+
+#Random cat
+@bot.command()
+async def cat(ctx):
+    if not config.ENABLE_CAT:
+        return
+    await ctx.send("https://cataas.com/cat")
+
 #Help
 @bot.command()
 async def help(ctx):
@@ -122,7 +145,10 @@ async def help(ctx):
         return
     await ctx.send("""
     🛠 Commands:
+    !userinfo - see info about an user
+    !ball - random 8ball
     !ping - check latency
+    !cat - random cat
     !kick - kick a user (mods only)
     !ban - ban a user (mods only)
     !s - send message as bot (mods only)
