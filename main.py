@@ -155,4 +155,17 @@ async def help(ctx):
     !help - THIS COMMAND
     """)
 
+#In case of error
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send("❌ You don't have permission to do that.")
+    elif isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send("❌ Missing arguments.")
+    elif isinstance(error, commands.CommandNotFound):
+        return
+    else:
+        await ctx.send("❌ Something went wrong.")
+        print(error)
+
 bot.run(config.bot_secret)
