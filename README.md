@@ -28,12 +28,12 @@ To get started, run this into your computer's terminal:
    ```
 
 ## Demo
-![1](demo-imgs/botex1.PNG)
-![2](demo-imgs/botex2.PNG)
-![3](demo-imgs/botex3.PNG)
-![4](demo-imgs/botex4.PNG)
-![5](demo-imgs/botex5.PNG)
-![6](demo-imgs/botex6.PNG)
+![1](demo-imgs/botex1.PNG)<br>
+![2](demo-imgs/botex2.PNG)<br>
+![3](demo-imgs/botex3.PNG)<br>
+![4](demo-imgs/botex4.PNG)<br>
+![5](demo-imgs/botex5.PNG)<br>
+![6](demo-imgs/botex6.PNG)<br>
 
 ## License
 This project’s source code is licensed under the MIT License.
